@@ -58,22 +58,14 @@ for (let info of INFO) {
 
         // Fade out
         for (let oldElement of document.querySelectorAll('.info')) {
-            vivi.start({element: oldElement, duration: ".25s", timingFunction: "ease-out", to: { opacity: '0%'}, callback: function() {
-                setTimeout(() => {
-                    oldElement.style.opacity = 0;
-                }, 240);
-            }});
+            oldElement.style.opacity = 0;
         };
 
         // Fade in new stuff
         setTimeout(function() {
             document.querySelector('#data-container').innerHTML = infoPrompt(data);
             for (let oldElement of document.querySelectorAll('.info')) {
-                vivi.start({element: oldElement, duration: ".25s", timingFunction: "ease-in", to: { opacity: '100%'}, delay: 200, callback: function() {
-                    setTimeout(() => {
-                        oldElement.style.opacity = 1;
-                    }, 230);
-                }});
+                oldElement.style.opacity = 1;
             };
         }, 245);
     }, true);
