@@ -3,6 +3,10 @@ let INFO = [
         {
             title: 'The ENIAC is created',
             text: 'It was origionally used to create firing tables for the military. Programmed manually using switches, which could take days.',
+            image: {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Eniac.jpg/220px-Eniac.jpg',
+                caption: 'The ENIAC',
+            },
         },
     ]},
     { year: '1950s', data: [
