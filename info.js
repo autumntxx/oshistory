@@ -62,6 +62,9 @@ let INFO = [
             title: 'Window managers were first developed',
             text: 'Later becoming popular in the 80s, window managers let users open multiple "windows" side by side.',
         },
-
+        {
+            title: 'The Intel 4004 Microprocessor was created',
+            text: 'It was as powerful as the first electronic computer ever built, which took up an entire room. It\'s circut lines were only 10 microns wide!',
+        },
     ]},
 ]
