@@ -80,5 +80,15 @@ let INFO = [
             title: 'More UNIX variants',
             text: 'Companies made their own versions of UNIX to run on their hardware. These companies included IBM, HP, and Sun Microsystems.',
         },
+        {
+            title: 'Microsoft Windows',
+            text: 'The first verison of Windows was released in 1985. It was a small 16-bit graphical interface that ran on top of PCDOS.'
+        },
+    ]},
+    { year: '1990s', data: [
+        {
+            title: 'Windows 95',
+            text: 'In 1995, Windows 95 was released. It added a start menu, plug and play drivers (Which let the user add and remove perpherals without restarting), and a 32-bit enviroment.',
+        },
     ]},
 ]
