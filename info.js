@@ -54,6 +54,14 @@ let INFO = [
             title: 'Unix was created',
             text: 'Dennis Ritchie and Ken Thompson created UNIX from their ideas after Bell Labs stopped quit working on Multics. UNIX is a pun of Multics.',
         },
+        {
+            title: 'Networking was introduced',
+            text: 'Universities become linked by ARPANET and BITNET',
+        },
+        {
+            title: 'Window managers were first developed',
+            text: 'Later becoming popular in the 80s, window managers let users open multiple "windows" side by side.',
+        },
 
     ]},
 ]
