@@ -81,10 +81,3 @@ for (let info of INFO) {
 
 
 document.getElementById('timeline-bar').style.width = iconMargin * 2 + 'px';
-
-
-// Image stuffs
-document.getElementById('content').addEventListener('click', (e) => {
-    console.log('Clicked!');
-    document.getElementById('imageview').classList.remove('enabled');
-});
