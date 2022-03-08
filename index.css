@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&display=swap');
+
+
+html, body {
+    background: hsl(255, 15%, 15%);
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+#content {
+    position: absolute;
+    left: 50%;
+    height: 90%;
+    width: 75%;
+    transform: translate(-50%, 0);
+    max-width: 42rem;
+}
+
+#timeline {
+    height: 6rem;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    display: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border-radius: .5rem;
+}
+
+#timeline-bar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, 0);
+    height: 7.5%;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 18%, rgba(93,87,255,1) 100%);
+    border-top: 3px solid hsl(255, 28%, 25%);
+    border-bottom: 3px solid hsl(255, 28%, 25%);
+}
+
+.icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    border: 3px solid hsl(255, 28%, 25%);
+    background-color: hsl(255, 10%, 30%);
+    display: inline-block;
+    position: absolute;
+    top: 55%;
+    left: 5px;
+    transform: translate(0, -41.5%);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: ease-in-out .35s background-color;
+}
+
+.label {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 2rem;
+    width: 2rem;
+    font-size: 12px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: rgba(255, 255, 255, 0.452);
+}
+
+.info {
+    padding-top: 1rem;
+    padding-bottom: 1.25rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+    background-color: black;
+    border-radius: .75rem;
+    margin-bottom: 1rem;
+    opacity: 0%;
+    transition: background-color .10s ease-in;
+}
+
+.info:hover {
+    background-color: rgb(15, 15, 15);
+}
+
+#data-container {
+    position: absolute;
+    top: 11rem;
+    width: 100%;
+}
+
+.info h1 {
+    color: white;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 1.5rem;
+}
+
+.info p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.733);
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.icon.enabled {
+    background-color: hsl(255, 20%, 60%);
+}
