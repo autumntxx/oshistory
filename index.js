@@ -64,10 +64,12 @@ for (let info of INFO) {
         // Fade in new stuff
         setTimeout(function() {
             document.querySelector('#data-container').innerHTML = infoPrompt(data);
-            for (let oldElement of document.querySelectorAll('.info')) {
-                oldElement.style.opacity = 1;
-            };
-        }, 245);
+            setTimeout(() => {
+                for (let oldElement of document.querySelectorAll('.info')) {
+                    oldElement.style.opacity = 1;
+                };
+            }, 5);
+        }, 350);
     }, true);
 };
 
