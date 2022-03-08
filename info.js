@@ -52,7 +52,7 @@ let INFO = [
         },
         {
             title: 'Unix was created',
-            text: 'Dennis Ritchie and Ken Thompson created UNIX from their ideas after Bell Labs stopped quit working on Multics. UNIX is a pun of Multics.',
+            text: 'Dennis Ritchie and Ken Thompson created UNIX from their ideas after Bell Labs stopped quit working on Multics. UNIX is a pun of Multics. It was the first OS to use user/group IDs.',
         },
         {
             title: 'Networking was introduced',
@@ -65,6 +65,20 @@ let INFO = [
         {
             title: 'The Intel 4004 Microprocessor was created',
             text: 'It was as powerful as the first electronic computer ever built, which took up an entire room. It\'s circut lines were only 10 microns wide!',
+        },
+    ]},
+    { year: '1980s', data: [
+        {
+            title: 'The IBM personal computer',
+            text: 'IBM released their first personal computer in 1981. It ran PCDOS (a command line OS), which was later bought by Microsoft.'
+        },
+        {
+            title: 'The first release of Linux',
+            text: 'Linus Torvalds developed the operating system called Linux. It was designed to be a lightweight open-source clone of UNIX. Many computers still run Linux today. Linus Torvalds later developed an open-source version control system called git, which I am using to make this website.',
+        },
+        { 
+            title: 'More UNIX variants',
+            text: 'Companies made their own versions of UNIX to run on their hardware. These companies included IBM, HP, and Sun Microsystems.',
         },
     ]},
 ]
