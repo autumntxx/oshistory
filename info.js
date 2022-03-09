@@ -5,7 +5,7 @@ let INFO = [
             text: 'It was origionally used to create firing tables for the military. Programmed manually using switches, which could take days.',
             image: {
                 url: 'http://images.computerhistory.org/revonline/images/102618640-03-01.jpg?w=600',
-                caption: 'computerhistory.org - The ENIAC',
+                caption: 'The ENIAC',
                 source: 'https://www.computerhistory.org/revolution/birth-of-the-computer/4/78',
             },
         },
@@ -29,7 +29,7 @@ let INFO = [
             text: 'Was an early compiler, stood for FORMula TRANslator.',
             image: {
                 url: 'https://www.matecdev.com/img/Fortran_code.png',
-                caption: 'matecdev.com - 5 Reasons Why Fortan is Still Used',
+                caption: 'The FORTRAN language',
                 source: 'https://www.matecdev.com/posts/why-fortran-still-used.html',
             },
         },
@@ -55,6 +55,11 @@ let INFO = [
         {
             title: 'Multics',
             text: 'The first operating system to have seperate directories for users, a hierarchical file system, and access control. The name stood for Multiplexed Information and Computing Service.',
+            image: {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Multics_operatig_system.jpg',
+                text: 'The MULTICS terminal',
+                source: 'https://commons.wikimedia.org/wiki/File:Multics_operatig_system.jpg',
+            }
         },
         {
             title: 'HDDs become popular',
