@@ -4,8 +4,9 @@ let INFO = [
             title: 'The ENIAC is created',
             text: 'It was origionally used to create firing tables for the military. Programmed manually using switches, which could take days.',
             image: {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Eniac.jpg/220px-Eniac.jpg',
-                caption: 'The ENIAC',
+                url: 'http://images.computerhistory.org/revonline/images/102618640-03-01.jpg?w=600',
+                caption: 'computerhistory.org - The ENIAC',
+                source: 'https://www.computerhistory.org/revolution/birth-of-the-computer/4/78',
             },
         },
     ]},
@@ -17,10 +18,20 @@ let INFO = [
         {
             title: 'The IBM 701 is created',
             text: 'Ran on IBM speed code, which was a basic assembely language. Had 1,024 words of RAM.',
+            image: {
+                url: 'https://www.ibm.com/ibm/history/exhibits/701/images/141511_Large.jpg',
+                caption: 'IBM Archives: IBM 701',
+                source: 'https://www.ibm.com/ibm/history/exhibits/701/701_intro.html',
+            },
         },
         {
             title: 'FORTRAN was created',
             text: 'Was an early compiler, stood for FORMula TRANslator.',
+            image: {
+                url: 'https://www.matecdev.com/img/Fortran_code.png',
+                caption: 'matecdev.com - 5 Reasons Why Fortan is Still Used',
+                source: 'https://www.matecdev.com/posts/why-fortran-still-used.html',
+            },
         },
         {
             title: 'HDDs are created',
@@ -35,6 +46,11 @@ let INFO = [
         {
             title: 'DOS was created',
             text: 'A basic command line operating system that added names for files. Stands for Disk Operating System.',
+            image: {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ms-dosdir.png/640px-Ms-dosdir.png',
+                caption: 'A picture of the DOS terminal',
+                source: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ms-dosdir.png/640px-Ms-dosdir.png',
+            }
         },
         {
             title: 'Multics',
@@ -79,6 +95,11 @@ let INFO = [
         {
             title: 'The first release of Linux',
             text: 'Linus Torvalds developed the operating system called Linux. It was designed to be a lightweight open-source clone of UNIX. Many computers still run Linux today. Linus Torvalds later developed an open-source version control system called git, which I am using to make this website.',
+            image: {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Tux%2C_gray%EF%BC%8Fgrey_background.png/220px-Tux%2C_gray%EF%BC%8Fgrey_background.png',
+                caption: 'Tux - The Linux mascot',
+                source: 'https://en.wikipedia.org/wiki/Tux_(mascot)',
+            },
         },
         { 
             title: 'More UNIX variants',

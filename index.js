@@ -32,6 +32,7 @@ function makeInfo(data) {
                 imageview.src = prompt.image.url;
                 caption.innerHTML = prompt.image.caption;
                 caption.classList.add('enabled');
+                caption.href = prompt.image.source;
                 imageview.addEventListener('load', (e) => {
                     imageview.classList.add('enabled');
                 });
