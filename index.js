@@ -11,7 +11,7 @@ function makeInfo(data) {
     for (let prompt of data) {
         let div = document.createElement("div");
         let title = document.createElement("h1");
-        let text = document.createElement("p")
+        let text = document.createElement("p");
 
         title.innerHTML = prompt.title;
         text.innerHTML = prompt.text;
