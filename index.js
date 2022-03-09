@@ -1,12 +1,34 @@
 var item = document.getElementById("timeline");
 
 
-function infoPrompt(data) {
-    let returnData = ``;
+function makeInfo(data) {
+    document.getElementById('data-container').innerHTML = '';
     for (let prompt of data) {
-        returnData = returnData + `<div class="info"><h1>${prompt.title}</h1><p>${prompt.text}</p></div>`
+        let div = document.createElement("div");
+        let title = document.createElement("h1");
+        let text = document.createElement("p")
+
+        title.innerHTML = prompt.title;
+        text.innerHTML = prompt.text;
+        div.classList.add('info');
+
+        div.appendChild(title);
+        div.appendChild(text);
+
+        if (prompt.image) {
+            let imicon = document.createElement('span');
+            imicon.classList.add('material-icons-round', 'imicon');
+            imicon.innerHTML = 'image';
+            div.appendChild(imicon);
+            div.addEventListener('click', (e) => {
+                console.log(e);
+                document.querySelector('#imageview img').src = prompt.image.url;
+                document.getElementById('imageview').style.opacity = '0;';
+            });
+        };
+
+        document.getElementById('data-container').appendChild(div);
     }
-    return returnData;
 };
 
 let tabEnabled = 0;
@@ -63,10 +85,10 @@ for (let info of INFO) {
 
         // Fade in new stuff
         setTimeout(function() {
-            document.querySelector('#data-container').innerHTML = infoPrompt(data);
+            makeInfo(data);
             setTimeout(() => {
-                for (let oldElement of document.querySelectorAll('.info')) {
-                    oldElement.style.opacity = 1;
+                for (let element of document.querySelectorAll('.info')) {
+                    element.style.opacity = 1;
                 };
             }, 5);
         }, 350);
@@ -79,6 +101,5 @@ document.getElementById('timeline-bar').style.width = iconMargin * 2 + 'px';
 
 // Image stuffs
 document.getElementById('content').addEventListener('click', (e) => {
-    console.log('Clicked!');
     document.getElementById('imageview').classList.remove('enabled');
 });
