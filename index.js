@@ -30,6 +30,8 @@ function makeInfo(data) {
             fetch(prompt.image.url).then(response => response.blob()).then((blob) => {
                 var objectURL = URL.createObjectURL(blob);
                 imgurl = objectURL;
+            }).catch((e) => {
+                imgurl = prompt.image.url;
             });
             div.addEventListener('click', (e) => {
                 console.log('Clicked!')
