@@ -1,5 +1,9 @@
 var item = document.getElementById("timeline");
 
+document.getElementById('imageview').addEventListener('click', (e) => {
+    document.getElementById('imageview').classList.remove('enabled');
+    setTimeout(() => { makeImageDebounce = false; }, 1000);
+});
 
 function makeInfo(data) {
     document.getElementById('data-container').innerHTML = '';
@@ -21,9 +25,12 @@ function makeInfo(data) {
             imicon.innerHTML = 'image';
             div.appendChild(imicon);
             div.addEventListener('click', (e) => {
-                console.log(e);
-                document.querySelector('#imageview img').src = prompt.image.url;
-                document.getElementById('imageview').style.opacity = '0;';
+                console.log('Clicked!')
+                let imageview = document.getElementById('imageview');
+                imageview.src = prompt.image.url;
+                imageview.addEventListener('load', (e) => {
+                    imageview.classList.add('enabled');
+                });
             });
         };
 
@@ -97,9 +104,3 @@ for (let info of INFO) {
 
 
 document.getElementById('timeline-bar').style.width = iconMargin * 2 + 'px';
-
-
-// Image stuffs
-document.getElementById('content').addEventListener('click', (e) => {
-    document.getElementById('imageview').classList.remove('enabled');
-});

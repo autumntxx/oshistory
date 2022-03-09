@@ -68,7 +68,7 @@ html {
     width: 2rem;
     font-size: 12px;
     font-family: 'Be Vietnam Pro', sans-serif;
-    color: rgba(255, 255, 255, 0.452);
+    color: rgba(255, 255, 255, .6);
 }
 
 .info {
@@ -125,15 +125,23 @@ html {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -55%);
     position: fixed;
     z-index: 5;
-    border: 1rem solid rgba(0, 0, 0, 0.5);
+    border: .5rem solid rgba(0, 0, 0, 0.5);
     border-radius: .75rem;
     opacity: 0;
-    transition: opacity .5s linear;
+    transition: opacity .25s linear;
+    max-width: 30rem;
+    pointer-events: none;
+    width: 90vw;
+}
+
+#imageview img {
+    width: 90vw;
 }
 
 #imageview.enabled {
     opacity: 1;
+    pointer-events: auto;
 }
