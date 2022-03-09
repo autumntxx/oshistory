@@ -68,20 +68,22 @@ html {
     width: 2rem;
     font-size: 12px;
     font-family: 'Be Vietnam Pro', sans-serif;
-    color: rgba(255, 255, 255, 0.452);
+    color: rgba(255, 255, 255, .6);
 }
 
 .info {
     padding-top: 1rem;
-    padding-bottom: 1.25rem;
+    padding-bottom: 1.35rem;
     padding-left: 5%;
     padding-right: 5%;
     width: 90%;
     background-color: black;
     border-radius: .75rem;
     margin-bottom: 1rem;
-    opacity: 0%;
     transition: background-color .10s ease-in;
+    opacity: 0%;
+    transition: opacity .4s;
+    position: relative;
 }
 
 .info:hover {
@@ -92,6 +94,15 @@ html {
     position: absolute;
     top: 11rem;
     width: 100%;
+}
+
+.imicon {
+    font-size: .7rem;
+    color: hsl(255, 15%, 50%);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 .info h1 {
@@ -112,17 +123,42 @@ html {
 
 #imageview {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: fixed;
     z-index: 5;
-    border: 1rem solid rgba(0, 0, 0, 0.5);
+    border: .5rem solid rgba(0, 0, 0, 0.5);
     border-radius: .75rem;
     opacity: 0;
-    transition: opacity .5s linear;
+    transition: opacity .25s linear;
+    max-width: 30rem;
+    pointer-events: none;
+    width: 90vw;
 }
 
-#imageview.enabled {
+#imageview img {
+    width: 90vw;
+}
+
+#imageview.enabled, #imageview-caption.enabled {
     opacity: 1;
+    pointer-events: auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+#imageview-caption {
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Nunito', sans-serif;
+    font-weight: normal;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.35rem;
+    border-radius: .75rem;
 }

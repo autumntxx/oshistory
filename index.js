@@ -1,12 +1,45 @@
 var item = document.getElementById("timeline");
 
+document.getElementById('imageview').addEventListener('click', (e) => {
+    document.getElementById('imageview').classList.remove('enabled');
+    document.getElementById('imageview-caption').classList.remove('enabled');
+    setTimeout(() => { makeImageDebounce = false; }, 1000);
+});
 
-function infoPrompt(data) {
-    let returnData = ``;
+function makeInfo(data) {
+    document.getElementById('data-container').innerHTML = '';
     for (let prompt of data) {
-        returnData = returnData + `<div class="info"><h1>${prompt.title}</h1><p>${prompt.text}</p></div>`
+        let div = document.createElement("div");
+        let title = document.createElement("h1");
+        let text = document.createElement("p")
+
+        title.innerHTML = prompt.title;
+        text.innerHTML = prompt.text;
+        div.classList.add('info');
+
+        div.appendChild(title);
+        div.appendChild(text);
+
+        if (prompt.image) {
+            let imicon = document.createElement('span');
+            imicon.classList.add('material-icons-round', 'imicon');
+            imicon.innerHTML = 'image';
+            div.appendChild(imicon);
+            div.addEventListener('click', (e) => {
+                console.log('Clicked!')
+                let imageview = document.getElementById('imageview');
+                let caption = document.getElementById('imageview-caption');
+                imageview.src = prompt.image.url;
+                caption.innerHTML = prompt.image.caption;
+                caption.classList.add('enabled');
+                imageview.addEventListener('load', (e) => {
+                    imageview.classList.add('enabled');
+                });
+            });
+        };
+
+        document.getElementById('data-container').appendChild(div);
     }
-    return returnData;
 };
 
 let tabEnabled = 0;
@@ -58,24 +91,18 @@ for (let info of INFO) {
 
         // Fade out
         for (let oldElement of document.querySelectorAll('.info')) {
-            vivi.start({element: oldElement, duration: ".25s", timingFunction: "ease-out", to: { opacity: '0%'}, callback: function() {
-                setTimeout(() => {
-                    oldElement.style.opacity = 0;
-                }, 240);
-            }});
+            oldElement.style.opacity = 0;
         };
 
         // Fade in new stuff
         setTimeout(function() {
-            document.querySelector('#data-container').innerHTML = infoPrompt(data);
-            for (let oldElement of document.querySelectorAll('.info')) {
-                vivi.start({element: oldElement, duration: ".25s", timingFunction: "ease-in", to: { opacity: '100%'}, delay: 200, callback: function() {
-                    setTimeout(() => {
-                        oldElement.style.opacity = 1;
-                    }, 230);
-                }});
-            };
-        }, 245);
+            makeInfo(data);
+            setTimeout(() => {
+                for (let element of document.querySelectorAll('.info')) {
+                    element.style.opacity = 1;
+                };
+            }, 5);
+        }, 350);
     }, true);
 };
 
