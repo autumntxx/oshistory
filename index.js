@@ -25,11 +25,17 @@ function makeInfo(data) {
             imicon.classList.add('material-icons-round', 'imicon');
             imicon.innerHTML = 'image';
             div.appendChild(imicon);
+            let imgurl = '';
+
+            fetch(prompt.image.url).then(response => response.blob()).then((blob) => {
+                var objectURL = URL.createObjectURL(blob);
+                imgurl = objectURL;
+            });
             div.addEventListener('click', (e) => {
                 console.log('Clicked!')
                 let imageview = document.getElementById('imageview');
                 let caption = document.getElementById('imageview-caption');
-                imageview.src = prompt.image.url;
+                imageview.src = imgurl;
                 caption.innerHTML = prompt.image.caption;
                 caption.classList.add('enabled');
                 caption.href = prompt.image.source;
