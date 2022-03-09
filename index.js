@@ -2,6 +2,7 @@ var item = document.getElementById("timeline");
 
 document.getElementById('imageview').addEventListener('click', (e) => {
     document.getElementById('imageview').classList.remove('enabled');
+    document.getElementById('imageview-caption').classList.remove('enabled');
     setTimeout(() => { makeImageDebounce = false; }, 1000);
 });
 
@@ -27,7 +28,10 @@ function makeInfo(data) {
             div.addEventListener('click', (e) => {
                 console.log('Clicked!')
                 let imageview = document.getElementById('imageview');
+                let caption = document.getElementById('imageview-caption');
                 imageview.src = prompt.image.url;
+                caption.innerHTML = prompt.image.caption;
+                caption.classList.add('enabled');
                 imageview.addEventListener('load', (e) => {
                     imageview.classList.add('enabled');
                 });

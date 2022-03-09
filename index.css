@@ -123,9 +123,9 @@ html {
 
 #imageview {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%, -55%);
+    transform: translate(-50%, -50%);
     position: fixed;
     z-index: 5;
     border: .5rem solid rgba(0, 0, 0, 0.5);
@@ -141,7 +141,24 @@ html {
     width: 90vw;
 }
 
-#imageview.enabled {
+#imageview.enabled, #imageview-caption.enabled {
     opacity: 1;
     pointer-events: auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+#imageview-caption {
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Nunito', sans-serif;
+    font-weight: normal;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.35rem;
+    border-radius: .75rem;
 }
