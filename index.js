@@ -25,6 +25,7 @@ function makeInfo(data) {
             imicon.classList.add('material-icons-round', 'imicon');
             imicon.innerHTML = 'image';
             div.appendChild(imicon);
+            div.style.cursor = 'context-menu';
             let imgurl = '';
 
             fetch(prompt.image.url).then(response => response.blob()).then((blob) => {
