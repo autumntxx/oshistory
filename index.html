@@ -10,6 +10,7 @@
       rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/gh/musictheory/vivi.js@latest/src/vivi.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore-umd-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3/dist/js.cookie.min.js"></script>
         <script src="info.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
         <script src="index.js" defer></script>
@@ -18,6 +19,11 @@
     <body>
         <img id="imageview" src="" alt=""></img>
         <a id="imageview-caption" target="_blank" rel="noreferrer noopener"></a>
+        <div id="feedback">
+            <h1>Feedback</h1>
+            <textarea name="feedback" id="feedback-textarea"></textarea>
+            <button id="feedback-submit">Send</button>
+        </div>
 
         <div id="content">
             <div id="timeline">

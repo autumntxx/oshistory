@@ -162,3 +162,57 @@ html {
     padding: 0.35rem;
     border-radius: .75rem;
 }
+
+div#feedback {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 9rem;
+    width: 19rem;
+    padding: 1rem;
+    background: black;
+    border-radius: 1rem;
+    z-index: 5;
+    transition: opacity .5s linear;
+}
+
+div#feedback.disabled {
+    opacity: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap');
+
+div#feedback h1 {
+    font-family: 'Readex Pro', sans-serif;
+    color: white;
+    font-size: 25px;
+    margin: unset;
+}
+
+#feedback-textarea {
+    resize: none;
+    width: 97.5%;
+    height: 5.8rem;
+    margin-top: .3rem;
+    background: none;
+    border-radius: .3rem;
+    border: 2px solid gray;
+    color: white;
+}
+
+grammarly-extension {
+    display: none;
+}
+
+#feedback-submit {
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 700;
+    position: absolute;
+    right: 1.3rem;
+    bottom: 1.35rem;
+    padding: .15rem;
+    color: white;
+    background: unset;
+    border: unset;
+    cursor: pointer;
+}
