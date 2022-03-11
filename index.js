@@ -119,17 +119,23 @@ for (let info of INFO) {
 
 document.getElementById('timeline-bar').style.width = iconMargin * 2 + 'px';
 
-if (Cookies.get('feedbackBlocked')) {
-    document.getElementById('feedback').classList.add('disabled');
-};
+setTimeout(() => {
+    if (!Cookies.get('feedbackBlocked') && screen.width > 810) {
+        document.getElementById('feedback').classList.add('enabled');
+    };
+}, 30000);
 
 document.getElementById('feedback-submit').onclick = (e) => {
-    Cookies.set('feedbackBlocked', true, { expires: 12 });
+    if (document.getElementById('feedback-textarea').value.length < 8) {
+        document.getElementById('feedback-textarea').value = 'Please write a longer message';
+    };
+    
+    Cookies.set('feedbackBlocked', true, { expires: 16 });
     let form = new FormData();
     form.append('message', document.getElementById('feedback-textarea').value);
     document.getElementById('feedback-textarea').value = 'Sent!';
     fetch('https://form.taxi/s/pj64moe2', { method: 'POST', body: form});
     setTimeout(() => {
-        document.getElementById('feedback').classList.add('disabled');
+        document.getElementById('feedback').classList.remove('enabled');
     }, 500);
 };
