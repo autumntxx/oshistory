@@ -135,6 +135,7 @@ html {
     max-width: 30rem;
     pointer-events: none;
     width: 90vw;
+    min-height: 2rem;
 }
 
 #imageview img {

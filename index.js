@@ -66,10 +66,13 @@ window.onkeydown = (e) => {
 let iconMargin = 30;
 let activePoint = null;
 
-
+let currentPoint = 0;
 for (let info of INFO) {
+    const thisPoint = currentPoint;
     let newIcon = document.createElement('span');
     newIcon.classList.add('icon');
+    newIcon.classList.add(`icon-${currentPoint}`);
+    currentPoint += 1;
     newIcon.tabIndex = 0;
     document.getElementById('timeline').appendChild(newIcon);
     let newLabel = document.createElement('p');
@@ -98,6 +101,11 @@ for (let info of INFO) {
         activePoint = newIcon;
         newIcon.classList.add('enabled');
         data = info.data;
+
+        const url = new URL(window.location);
+        url.searchParams.set('s', thisPoint);
+        window.history.pushState({}, '', url.href);
+
 
         // Fade out
         for (let oldElement of document.querySelectorAll('.info')) {
@@ -138,4 +146,11 @@ document.getElementById('feedback-submit').onclick = (e) => {
     setTimeout(() => {
         document.getElementById('feedback').classList.remove('enabled');
     }, 500);
+};
+
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('s')) {
+    document.querySelector(`.icon-${urlParams.get('s')}`).click();
+    console.log(`icon-${urlParams.get('s')}`);
+    console.log(urlParams.toString());
 };
