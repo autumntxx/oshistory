@@ -4,9 +4,9 @@ let INFO = [
             title: 'The ENIAC is created',
             text: 'It was origionally used to create firing tables for the military. Programmed manually using switches, which could take days.',
             image: {
-                url: 'http://images.computerhistory.org/revonline/images/102618640-03-01.jpg?w=600',
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ENIAC_Penn1.jpg/796px-ENIAC_Penn1.jpg?20181112040822',
                 caption: 'The ENIAC',
-                source: 'https://www.computerhistory.org/revolution/birth-of-the-computer/4/78',
+                source: 'https://en.wikipedia.org/wiki/ENIAC',
             },
         },
     ]},
@@ -19,19 +19,14 @@ let INFO = [
             title: 'The IBM 701 is created',
             text: 'Ran on IBM speed code, which was a basic assembely language. Had 1,024 words of RAM.',
             image: {
-                url: 'https://www.ibm.com/ibm/history/exhibits/701/images/141511_Large.jpg',
-                caption: 'IBM Archives: IBM 701',
-                source: 'https://www.ibm.com/ibm/history/exhibits/701/701_intro.html',
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/IBM_701console.jpg/800px-IBM_701console.jpg',
+                caption: 'The control panel for the IBM 701',
+                source: 'https://en.wikipedia.org/wiki/IBM_701',
             },
         },
         {
             title: 'FORTRAN was created',
             text: 'Was an early compiler, stood for FORMula TRANslator.',
-            image: {
-                url: 'https://www.matecdev.com/img/Fortran_code.png',
-                caption: 'The FORTRAN language',
-                source: 'https://www.matecdev.com/posts/why-fortran-still-used.html',
-            },
         },
         {
             title: 'HDDs are created',
@@ -56,9 +51,9 @@ let INFO = [
             title: 'Multics',
             text: 'The first operating system to have seperate directories for users, a hierarchical file system, and access control. The name stood for Multiplexed Information and Computing Service.',
             image: {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Multics_operatig_system.jpg',
-                text: 'The MULTICS terminal',
-                source: 'https://commons.wikimedia.org/wiki/File:Multics_operatig_system.jpg',
+                url: 'https://en.wikipedia.org/wiki/Multics',
+                caption: 'The MULTICS login screen',
+                source: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Multics-Login.png',
             }
         },
         {
@@ -78,6 +73,11 @@ let INFO = [
         {
             title: 'Unix was created',
             text: 'Dennis Ritchie and Ken Thompson created UNIX from their ideas after Bell Labs stopped quit working on Multics. UNIX is a pun of Multics. It was the first OS to use user/group IDs.',
+            image: {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Simh-pdp11-unix-sysiii.png',
+                caption: 'The UNIX terminal',
+                source: 'https://en.wikipedia.org/wiki/Unix',
+            },
         },
         {
             title: 'Networking was introduced',
@@ -95,7 +95,12 @@ let INFO = [
     { year: '1980s', data: [
         {
             title: 'The IBM personal computer',
-            text: 'IBM released their first personal computer in 1981. It ran PCDOS (a command line OS), which was later bought by Microsoft.'
+            text: 'IBM released their first personal computer in 1981. It ran PCDOS (a command line OS), which was later bought by Microsoft.',
+            image: {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/PC_DOS_1.10_screenshot.png/300px-PC_DOS_1.10_screenshot.png',
+                caption: 'The PCDOS terminal',
+                source: 'https://en.wikipedia.org/wiki/IBM_PC_DOS',
+            },
         },
         {
             title: 'The first release of Linux',
@@ -112,7 +117,7 @@ let INFO = [
         },
         {
             title: 'Microsoft Windows',
-            text: 'The first verison of Windows was released in 1985. It was a small 16-bit graphical interface that ran on top of PCDOS.'
+            text: 'The first verison of Windows was released in 1985. It was a small 16-bit graphical interface that ran on top of PCDOS.',
         },
     ]},
     { year: '1990s', data: [
