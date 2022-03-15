@@ -153,4 +153,6 @@ if (urlParams.get('s')) {
     document.querySelector(`.icon-${urlParams.get('s')}`).click();
     console.log(`icon-${urlParams.get('s')}`);
     console.log(urlParams.toString());
+} else if (urlParams.get('fbd')) {
+    Cookies.set('feedbackBlocked', true, { expires: 16 });
 };
