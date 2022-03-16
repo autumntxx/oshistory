@@ -12,6 +12,7 @@ function makeInfo(data) {
         let div = document.createElement("div");
         let title = document.createElement("h1");
         let text = document.createElement("p");
+        div.style.opacity = '0';
 
         title.innerHTML = prompt.title;
         text.innerHTML = prompt.text;
@@ -26,24 +27,22 @@ function makeInfo(data) {
             imicon.innerHTML = 'image';
             div.appendChild(imicon);
             div.style.cursor = 'context-menu';
-            let imgurl = '';
+            let imgurl = prompt.image.url;
 
             fetch(prompt.image.url).then(response => response.blob()).then((blob) => {
                 var objectURL = URL.createObjectURL(blob);
                 imgurl = objectURL;
-            }).catch((e) => {
-                imgurl = prompt.image.url;
-            });
+            }).catch((e) => {});
             div.addEventListener('click', (e) => {
                 console.log('Clicked!')
                 let imageview = document.getElementById('imageview');
                 let caption = document.getElementById('imageview-caption');
                 imageview.src = imgurl;
                 caption.innerHTML = prompt.image.caption;
-                caption.classList.add('enabled');
                 caption.href = prompt.image.source;
                 imageview.addEventListener('load', (e) => {
                     imageview.classList.add('enabled');
+                    caption.classList.add('enabled');
                 });
             });
         };
@@ -120,7 +119,7 @@ for (let info of INFO) {
                     element.style.opacity = 1;
                 };
             }, 5);
-        }, 350);
+        }, 400);
     }, true);
 };
 
@@ -131,7 +130,7 @@ setTimeout(() => {
     if (!Cookies.get('feedbackBlocked') && screen.width > 810) {
         document.getElementById('feedback').classList.add('enabled');
     };
-}, 30000);
+}, 45000);
 
 document.getElementById('feedback-submit').onclick = (e) => {
     if (document.getElementById('feedback-textarea').value.length < 8) {
