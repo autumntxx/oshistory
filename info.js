@@ -51,9 +51,9 @@ let INFO = [
             title: 'Multics',
             text: 'The first operating system to have seperate directories for users, a hierarchical file system, and access control. The name stood for Multiplexed Information and Computing Service.',
             image: {
-                url: 'https://en.wikipedia.org/wiki/Multics',
+                url: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Multics-Login.png',
                 caption: 'The MULTICS login screen',
-                source: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Multics-Login.png',
+                source: 'https://en.wikipedia.org/wiki/Multics',
             }
         },
         {
