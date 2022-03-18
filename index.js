@@ -101,9 +101,7 @@ for (let info of INFO) {
         newIcon.classList.add('enabled');
         data = info.data;
 
-        const url = new URL(window.location);
-        url.searchParams.set('s', thisPoint);
-        window.history.pushState({}, '', url.href);
+        window.sessionStorage.setItem('tab', thisPoint);
 
 
         // Fade out
@@ -147,14 +145,9 @@ document.getElementById('feedback-submit').onclick = (e) => {
     }, 500);
 };
 
-const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.get('s')) {
-    document.querySelector(`.icon-${urlParams.get('s')}`).click();
-    console.log(`icon-${urlParams.get('s')}`);
-    console.log(urlParams.toString());
-} else if (urlParams.get('fbd')) {
-    Cookies.set('feedbackBlocked', true, { expires: 16 });
-};
+try {
+    document.querySelector(`.icon-${window.sessionStorage.getItem('tab')}`).click();
+} catch {};
 
 document.getElementById('feedback-close').addEventListener('click', (e) => {
     document.getElementById('feedback').classList.remove('enabled');
