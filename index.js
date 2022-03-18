@@ -155,3 +155,8 @@ if (urlParams.get('s')) {
 } else if (urlParams.get('fbd')) {
     Cookies.set('feedbackBlocked', true, { expires: 16 });
 };
+
+document.getElementById('feedback-close').addEventListener('click', (e) => {
+    document.getElementById('feedback').classList.remove('enabled');
+    Cookies.set('feedbackBlocked', true, { expires: 8 });
+});
