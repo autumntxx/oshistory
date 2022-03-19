@@ -177,10 +177,12 @@ div#feedback {
     z-index: 5;
     opacity: 0;
     transition: opacity .5s ease;
+    pointer-events: none;
 }
 
 div#feedback.enabled {
     opacity: 1;
+    pointer-events: auto;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap');

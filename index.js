@@ -128,20 +128,20 @@ setTimeout(() => {
     if (!Cookies.get('feedbackBlocked') && screen.width > 810) {
         document.getElementById('feedback').classList.add('enabled');
     };
-}, 45000);
+}, 35000);
 
 document.getElementById('feedback-submit').onclick = (e) => {
     if (document.getElementById('feedback-textarea').value.length < 8) {
         document.getElementById('feedback-textarea').value = 'Please write a longer message';
+        return;
     };
     
-    Cookies.set('feedbackBlocked', true, { expires: 16 });
-    let form = new FormData();
-    form.append('message', document.getElementById('feedback-textarea').value);
+    sfd(document.getElementById('feedback-textarea').value);
     document.getElementById('feedback-textarea').value = 'Sent!';
-    fetch('https://form.taxi/s/pj64moe2', { method: 'POST', body: form});
+    
     setTimeout(() => {
         document.getElementById('feedback').classList.remove('enabled');
+        Cookies.set('feedbackBlocked', true, { expires: 16 });
     }, 500);
 };
 
@@ -151,5 +151,5 @@ try {
 
 document.getElementById('feedback-close').addEventListener('click', (e) => {
     document.getElementById('feedback').classList.remove('enabled');
-    Cookies.set('feedbackBlocked', true, { expires: 8 });
+    Cookies.set('feedbackBlocked', true, { expires: 1 });
 });
