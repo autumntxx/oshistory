@@ -128,7 +128,7 @@ setTimeout(() => {
     if (!Cookies.get('feedbackBlocked') && screen.width > 810) {
         document.getElementById('feedback').classList.add('enabled');
     };
-}, 35000);
+}, 20000);
 
 document.getElementById('feedback-submit').onclick = (e) => {
     if (document.getElementById('feedback-textarea').value.length < 8) {
