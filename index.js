@@ -153,3 +153,22 @@ document.getElementById('feedback-close').addEventListener('click', (e) => {
     document.getElementById('feedback').classList.remove('enabled');
     Cookies.set('feedbackBlocked', true, { expires: 1 });
 });
+
+let keyboardControlsEnabled = true;
+
+document.body.addEventListener('keydown', (e) => {
+    if (!keyboardControlsEnabled) {
+        return;
+    };
+    try {
+        if (e.key == 'ArrowLeft') {
+            document.querySelector(`.icon-${parseInt(window.sessionStorage.getItem('tab')) - 1}`).click();
+        } else if (e.key == 'ArrowRight') {
+            document.querySelector(`.icon-${parseInt(window.sessionStorage.getItem('tab')) + 1}`).click();
+        };
+        keyboardControlsEnabled = false;
+        setTimeout(() => {
+            keyboardControlsEnabled = true;
+        }, 350);
+    } catch {};
+});
