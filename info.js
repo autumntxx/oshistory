@@ -44,7 +44,7 @@ let INFO = [
             image: {
                 url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ms-dosdir.png/640px-Ms-dosdir.png',
                 caption: 'A picture of the DOS terminal',
-                source: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ms-dosdir.png/640px-Ms-dosdir.png',
+                source: 'https://en.wikipedia.org/wiki/MS-DOS',
             }
         },
         {
@@ -125,5 +125,33 @@ let INFO = [
             title: 'Windows 95',
             text: 'In 1995, Windows 95 was released. It added a start menu, plug and play drivers (Which let the user add and remove perpherals without restarting), and a 32-bit enviroment.',
         },
+        {
+            title: 'Rhapsody',
+            text: 'Rhapsody is a closed-source operating system developed by Apple to run on their own hardware.'
+        },
+    ]},
+    { year: '2000s', data : [
+        {
+            title: 'Windows XP',
+            text: 'Another operating system by Microsoft based on Windows NT. It introduced plug and play drivers, Wirless networks, and grouping on the task bar.',
+            image: {
+                url: 'https://upload.wikimedia.org/wikipedia/en/6/64/Windows_XP_Luna.png',
+                caption: 'The Windows XP layout and color scheme',
+                source: 'https://en.wikipedia.org/wiki/Windows_XP#New_and_updated_features',
+            },
+        },
+        {
+            title: 'The rise of smartphones',
+            text: 'Smartphones started becoming more "smart". Currently, 85% of all smartphones run the Linux kernel.',
+        },
+    ]},
+    { year: '2010s', data: [
+        {
+            title: 'Cloud services are used',
+            text: 'Operating systems are starting to add cloud services inside of them. Some examples are Chrome OS, and later Windows.',
+        },
+    ]},
+    { year: '2022', data: [
+        
     ]},
 ]

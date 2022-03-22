@@ -163,6 +163,7 @@ html {
     padding: 0.35rem;
     border-radius: .75rem;
     transition: opacity .25s linear;
+    max-width: 95%;
 }
 
 div#feedback {
