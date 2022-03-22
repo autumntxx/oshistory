@@ -77,17 +77,17 @@ html {
     padding-left: 5%;
     padding-right: 5%;
     width: 90%;
-    background-color: black;
+    background: black;
     border-radius: .75rem;
     margin-bottom: 1rem;
-    transition: background-color .10s ease-in;
     opacity: 0%;
-    transition: opacity .4s;
+    transition: opacity .4s, background .15s;
     position: relative;
 }
 
 .info:hover {
-    background-color: rgb(15, 15, 15);
+    transition: opacity .4s, background .15s;
+    background: rgb(15, 15, 15);
 }
 
 #data-container {
