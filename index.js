@@ -163,8 +163,10 @@ document.body.addEventListener('keydown', (e) => {
     try {
         if (e.key == 'ArrowLeft') {
             document.querySelector(`.icon-${parseInt(window.sessionStorage.getItem('tab')) - 1}`).click();
+            document.querySelector(`.icon-${parseInt(window.sessionStorage.getItem('tab')) - 1}`).scrollIntoView();
         } else if (e.key == 'ArrowRight') {
             document.querySelector(`.icon-${parseInt(window.sessionStorage.getItem('tab')) + 1}`).click();
+            document.querySelector(`.icon-${parseInt(window.sessionStorage.getItem('tab')) - 1}`).scrollIntoView();
         };
         keyboardControlsEnabled = false;
         setTimeout(() => {
