@@ -2,7 +2,7 @@ let INFO = [
     { year: '1940s', data: [
         {
             title: 'The ENIAC is created',
-            text: 'It was origionally used to create firing tables for the military. Programmed manually using switches, which could take days.',
+            text: 'It was originally used to create firing tables for the military. Programmed manually using switches, which could take days.',
             image: {
                 url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ENIAC_Penn1.jpg/796px-ENIAC_Penn1.jpg?20181112040822',
                 caption: 'The ENIAC',
@@ -17,7 +17,7 @@ let INFO = [
         },
         {
             title: 'The IBM 701 is created',
-            text: 'Ran on IBM speed code, which was a basic assembely language. Had 1,024 words of RAM.',
+            text: 'Ran on IBM speed code, which was a basic assembly language. Had 1,024 words of RAM.',
             image: {
                 url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/IBM_701console.jpg/800px-IBM_701console.jpg',
                 caption: 'The control panel for the IBM 701',
@@ -57,8 +57,8 @@ let INFO = [
             }
         },
         {
-            title: 'HDDs become popular',
-            text: 'Hard Disk Drives become popular after being invented in the 1956. Tape drives were not mostly used for backups.',
+            title: 'HDDs became popular',
+            text: 'Hard Disk Drives became popular after being invented in 1956. Tape drives were mostly used for backups.',
         },
         {
             title: 'The first minicomputers',
@@ -72,7 +72,7 @@ let INFO = [
         },
         {
             title: 'Unix was created',
-            text: 'Dennis Ritchie and Ken Thompson created UNIX from their ideas after Bell Labs stopped quit working on Multics. UNIX is a pun of Multics. It was the first OS to use user/group IDs.',
+            text: 'Dennis Ritchie and Ken Thompson created UNIX from their ideas after Bell Labs stopped working on Multics. UNIX is a pun of Multics. It was the first OS to use user/group IDs.',
             image: {
                 url: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Simh-pdp11-unix-sysiii.png',
                 caption: 'The UNIX terminal',
@@ -81,15 +81,15 @@ let INFO = [
         },
         {
             title: 'Networking was introduced',
-            text: 'Universities become linked by ARPANET and BITNET',
+            text: 'Universities become linked by ARPANET and BITNET.',
         },
         {
             title: 'Window managers were first developed',
-            text: 'Later becoming popular in the 80s, window managers let users open multiple "windows" side by side.',
+            text: 'Window managers let users open multiple "windows" side by side, this became popular later (in the 1980s).',
         },
         {
             title: 'The Intel 4004 Microprocessor was created',
-            text: 'It was as powerful as the first electronic computer ever built, which took up an entire room. It\'s circut lines were only 10 microns wide!',
+            text: 'It was as powerful as the first electronic computer ever built, which took up an entire room. Its circut lines were only 10 microns wide!',
         },
     ]},
     { year: '1980s', data: [
@@ -119,21 +119,43 @@ let INFO = [
             title: 'Microsoft Windows',
             text: 'The first verison of Windows was released in 1985. It was a small 16-bit graphical interface that ran on top of PCDOS.',
         },
+        {
+            title: 'Commodore 64',
+            text: 'The Commodore 64 was made by Commodore International and started to gain popularity around 1982. It was made to be an affordable personal computer, and ran it\'s own operating system called Commodore.',
+            image: {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Commodore-64-Computer-FL.png/1920px-Commodore-64-Computer-FL.png',
+                caption: 'The Commodore 64',
+                source: 'https://simple.wikipedia.org/wiki/Commodore_64',
+            },
+        }
     ]},
     { year: '1990s', data: [
         {
             title: 'Windows 95',
-            text: 'In 1995, Windows 95 was released. It added a start menu, plug and play drivers (Which let the user add and remove perpherals without restarting), and a 32-bit enviroment.',
+            text: 'In 1995, Windows 95 was released. It added a start menu, plug and play drivers (which let the user add and remove peripherals without restarting), and a 32-bit enviroment.',
         },
         {
             title: 'Rhapsody',
             text: 'Rhapsody is a closed-source operating system developed by Apple to run on their own hardware.'
         },
+        {
+            title: 'Windows NT',
+            text: 'It was designed to be a portable operating system, and the first OS be completely 32 bit. The NT stands for New Technology. It added the Windows Shell, Group Policies, NTFS, BitLocker, the Microsoft Store, Windows Update, and Hyper-V. It was also the first Windows OS to have a hybrid kernel, which combinded aspects of a microkernel and a monolitic kernel.',
+            image: {
+                url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/OS-structure2.svg/1280px-OS-structure2.svg.png',
+                caption: 'The different types of kernels',
+                source: 'https://en.wikipedia.org/wiki/Hybrid_kernel',
+            },
+        },
+        {
+            title: 'Windows 7',
+            text: 'A major release of Windows NT. Added many sound schemes, the Remote Desktop Protocal, Microsoft Vitual PC, Internet Explorer 8, and Windows Defender.'
+        },
     ]},
     { year: '2000s', data : [
         {
             title: 'Windows XP',
-            text: 'Another operating system by Microsoft based on Windows NT. It introduced plug and play drivers, Wirless networks, and grouping on the task bar.',
+            text: 'Another operating system by Microsoft based on Windows NT. It introduced plug and play drivers, wirless networks, and grouping on the task bar.',
             image: {
                 url: 'https://upload.wikimedia.org/wikipedia/en/6/64/Windows_XP_Luna.png',
                 caption: 'The Windows XP layout and color scheme',
@@ -148,8 +170,12 @@ let INFO = [
     { year: '2010s', data: [
         {
             title: 'Cloud services are used',
-            text: 'Operating systems are starting to add cloud services inside of them. Some examples are Chrome OS, and later Windows.',
+            text: 'Operating systems began to add cloud services inside of them. Some examples are Chrome OS, and later Windows.',
         },
+        {
+            title: 'Windows 10',
+            text: 'Windows 10 is once again based on Windows NT. It was made to be user-friendly and good for gaming. After 5 years of it\'s release, it was running on 1 billion devices.'
+        }
     ]},
     { year: '2022', data: [
         
