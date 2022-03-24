@@ -178,6 +178,13 @@ let INFO = [
         }
     ]},
     { year: '2022', data: [
-        
+        {
+            title: 'Making this website',
+            text: 'I made this website using Vanilla JS & the Document API (react bad). For version control, I use Git with Netlify to automatically publish a new version with every commit, and Cloudflare for some basic caching.',
+        },
+        {
+            title: 'Other things I made',
+            text: 'You can find a list of my social media profiles and projects at <a href="https://kc5f.xyz">kc5f.xyz</a>.',
+        },
     ]},
 ]
